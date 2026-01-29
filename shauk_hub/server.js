@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 // Configuration
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://admin:shauk-hub-123@shgc-shauk-hub.1lnheox.mongodb.net/?appName=shgc-shauk-hub';
+const MONGODB_URI = process.env.MONGODB_URI || '';
 const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_hobby_key_123';
 
 // Middleware
@@ -182,4 +182,5 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
 
